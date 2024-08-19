@@ -1,0 +1,203 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #000000;
+    /* Black background for a dark theme */
+    color: #ffffff;
+    /* White text color */
+}
+
+/* Container for the App */
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #1a1a1a;
+    /* Dark grey background for the header */
+    color: #ffffff;
+    /* White text color */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #ffffff;
+    /* White bottom border for separation */
+}
+
+/* Vendor Dashboard Button Styles */
+.title {
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    /* White text color */
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+    text-align: center;
+    text-decoration: none;
+    /* Ensures no underline */
+    outline: none;
+    /* Remove default outline */
+}
+
+/* Remove tooltip effect */
+
+.title:hover,
+.title:focus {
+    color: #ffffff;
+    /* Highlight color on hover/focus */
+    transform: scale(1.05);
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    /* Subtle shadow on hover */
+}
+
+.title:active {
+    color: #ffffff;
+    /* Maintain highlight color on click */
+    transform: scale(1.05);
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    /* Maintain shadow on click */
+    outline: none;
+    /* Remove default outline on button click */
+}
+
+/* Ensure no tooltip text appears */
+.title[title] {
+    title: none;
+    /* Ensures no tooltip text is present */
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    /* White text color */
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.dropdown-toggle:hover {
+    color: #ffcc00;
+    /* Highlight color on hover */
+    transform: rotate(90deg);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    /* White shadow effect on hover */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 70px;
+    /* Adjust based on header height */
+    right: 40px;
+    background-color: #1a1a1a;
+    /* Dark grey background for dropdown menu */
+    border: 1px solid #333333;
+    /* Slightly lighter border */
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+    width: 250px;
+    z-index: 1000;
+    padding: 15px 0;
+    animation: fadeIn 0.3s ease-out;
+    /* Fade-in effect */
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #ffffff;
+    /* White text color */
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333333;
+    /* Darker grey background on hover */
+    padding-left: 30px;
+    /* Slide-in effect */
+}
+
+.logout-button {
+    background-color: #ffffff;
+    /* White background for logout button */
+    color: #000000;
+    /* Black text color */
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 0 0 12px 12px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #e0e0e0;
+    /* Light grey background on hover */
+    color: #000000;
+    /* Black text color */
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Shadow effect on hover */
+}
+
+/* Main Content Styles */
+.content {
+    flex: 1;
+    padding: 30px;
+    background: #000000;
+    /* Black background for content */
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+    margin: 20px;
+    /* Margin for spacing */
+    transition: box-shadow 0.3s;
+}
+
+.content:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 1);
+    /* Darker shadow on hover */
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    /* White text color */
+    margin: 0;
+    font-weight: 700;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #cccccc;
+    /* Light grey text color */
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
